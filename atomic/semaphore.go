@@ -8,7 +8,8 @@ package atomic
 type Semaphore chan struct{}
 
 // There is not NewSemaphore. Instead, Just using builtin `make`
-// make(Semaphore,N) will
+// make(Semaphore,N) will create a semaphore with N resource
+// here resource is empty slot, rather than item put into it
 
 // Semaphore_P acquire n resources
 func (s Semaphore) P(n int) {
